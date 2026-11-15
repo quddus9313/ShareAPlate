@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, Utensils, HeartHandshake, Truck, MapPin } from 'lucide-react';
 import type { ImpactStats } from '../../types';
+import heroFoodRescueImg from '../../assets/images/hero_food_rescue_1794072150460.jpg';
 
 interface HeroProps {
   stats?: ImpactStats;
@@ -83,7 +84,7 @@ export const Hero: React.FC<HeroProps> = ({
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-xl border border-neutral-200 aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] bg-neutral-100">
               <img
-                src="/src/assets/images/hero_food_rescue_1794072150460.jpg"
+                src={heroFoodRescueImg}
                 alt="Community food rescue meal packages prepared with care"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"

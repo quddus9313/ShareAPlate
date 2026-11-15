@@ -3,6 +3,10 @@ import type { Donation, FoodCategory, SmartMatchResult } from '../../types';
 import { useAuth } from '../../context/AuthContext';
 import { api } from '../../services/api';
 import { QrVerificationModal } from '../common/QrVerificationModal';
+import freshMealsImg from '../../assets/images/marketplace_fresh_meals_1794072150653.jpg';
+import bakeryBreadImg from '../../assets/images/bakery_surplus_bread_1794072151734.jpg';
+import packedPlattersImg from '../../assets/images/hero_food_rescue_1794072150460.jpg';
+import freshProduceImg from '../../assets/images/food_plate_sharing_1794072151768.jpg';
 import {
   PlusCircle,
   QrCode,
@@ -44,7 +48,7 @@ export const DonorDashboard: React.FC<{
   const [isVegetarian, setIsVegetarian] = useState(true);
   const [allergens, setAllergens] = useState('None');
   const [packagingType, setPackagingType] = useState('Compostable Kraft Boxes');
-  const [selectedImage, setSelectedImage] = useState('/src/assets/images/marketplace_fresh_meals_1794072150653.jpg');
+  const [selectedImage, setSelectedImage] = useState(freshMealsImg);
   const [pickupHours, setPickupHours] = useState(3);
   const [specialInstructions, setSpecialInstructions] = useState('Enter through the kitchen service lane, ask for executive chef.');
   const [isRecurring, setIsRecurring] = useState(false);
@@ -60,10 +64,10 @@ export const DonorDashboard: React.FC<{
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const imagePresets = [
-    { label: 'Fresh Cooked Meals', url: '/src/assets/images/marketplace_fresh_meals_1794072150653.jpg' },
-    { label: 'Artisanal Bakery Breads', url: '/src/assets/images/bakery_surplus_bread_1794072151734.jpg' },
-    { label: 'Community Packed Platters', url: '/src/assets/images/hero_food_rescue_1794072150460.jpg' },
-    { label: 'Fresh Veggies & Produce', url: '/src/assets/images/food_plate_sharing_1794072151768.jpg' },
+    { label: 'Fresh Cooked Meals', url: freshMealsImg },
+    { label: 'Artisanal Bakery Breads', url: bakeryBreadImg },
+    { label: 'Community Packed Platters', url: packedPlattersImg },
+    { label: 'Fresh Veggies & Produce', url: freshProduceImg },
   ];
 
   const fetchDonorData = async () => {
